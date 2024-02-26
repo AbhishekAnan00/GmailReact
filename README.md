@@ -1,8 +1,13 @@
-# React + Vite
+#   Work
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Complete search, inbox, and compose components
 
-Currently, two official plugins are available:
+- Search functionality allows users to efficiently filter emails
+- Inbox component displays emails with proper styling and layout
+- Compose component enables users to create and send new emails
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Work in progress:
+- Send component: Incomplete, under development
+- Starred component: Incomplete, under development
+- Snoozed component: Incomplete, under development
+
