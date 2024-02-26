@@ -15,10 +15,14 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa6";
 import { MdExpandMore } from "react-icons/md";
 import { MdLabelImportantOutline } from "react-icons/md";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openSendMessage } from '../redux/EmailSlice';
 import { useNavigate } from 'react-router-dom';
-const Sidebar = () => {
+import { doc, setDoc } from 'firebase/firestore';
+import { fireDB } from '../firebase';
+import { selectUser } from '../redux/UserSlice';
+const Sidebar = (props) => {
+  const user = useSelector(selectUser)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const inboxOnClick = () => {
@@ -27,6 +31,7 @@ const Sidebar = () => {
   const sendOnClick = () => {
     navigate("/sent")
   }
+ 
     return (
     <div className='mt-4 w-[250px]'>
       <div className="ml-2 h-[40px] w-[160px] flex justify-center text-xl place-items-center bg-secondary rounded-2xl pt-8 pb-8 gap-2 hover:shadow-lg transition-all duration-300 cursor-pointer" onClick={() =>dispatch(openSendMessage())}>
@@ -34,17 +39,17 @@ const Sidebar = () => {
        <p>compose</p>
       </div>
      <div className='mt-2'>
-      <SidebarOption icon={<MdOutlineGifBox onClick={inboxOnClick} />} title={"Inbox"} number={"24"} isActive={true} />
-      <SidebarOption icon={<MdOutlineStarBorderPurple500 />} title={"Starred"} number={"24"}/>
-      <SidebarOption icon={<GoClock />} title={"Clock"} number={"24"}/>
-      <SidebarOption icon={<BiSend onClick={sendOnClick} />} title={"Sent"} number={"24"}/>
-      <SidebarOption icon={<BsChatSquareText />} title={"Chats"} number={"24"}/>
-      <SidebarOption icon={<LuFile />} title={"Draft"} number={"24"}/>
-      <SidebarOption icon={<MdExpandMore />} title={"More"} number={24}/>
-      <SidebarOption icon={<MdLabelImportantOutline />} title={"Important"} number={24}/>
-      <SidebarOption icon={<LuMails />} title={"All Mail"} number={"24"}/>
-      <SidebarOption icon={<RiSpamLine />} title={"Spam"} number={"24"}/>
-      <SidebarOption icon={<RiDeleteBin6Line />} title={"Bin"} number={"24"}/>
+      <SidebarOption icon={<MdOutlineGifBox onClick={inboxOnClick} />} title={"Inbox"} number={"21"}  isActive={true} />
+      <SidebarOption icon={<MdOutlineStarBorderPurple500 />} title={"Starred"} />
+      <SidebarOption icon={<GoClock />} title={"Clock"} />
+      <SidebarOption icon={<BiSend onClick={sendOnClick} />} title={"Sent"} />
+      <SidebarOption icon={<BsChatSquareText />} title={"Chats"} />
+      <SidebarOption icon={<LuFile />} title={"Draft"} />
+      <SidebarOption icon={<MdExpandMore />} title={"More"} />
+      <SidebarOption icon={<MdLabelImportantOutline />} title={"Important"} />
+      <SidebarOption icon={<LuMails />} title={"All Mail"} />
+      <SidebarOption icon={<RiSpamLine />} title={"Spam"} />
+      <SidebarOption icon={<RiDeleteBin6Line />} title={"Bin"} />
      <div  className='flex font-semibold text-lg ml-3 mt-2'>
       <p><BiCaretRight /></p>
       <span>Categories</span>

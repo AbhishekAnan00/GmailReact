@@ -23,7 +23,7 @@ const SentBox = (props) => {
     <>
       <div className=" bg-white w-[1100px] rounded-2xl">
         <EmailCount />
-        {email.filter((obj) => obj.data.search.toLowerCase().includes(props.search)).map((mail) => {
+        {email.map((mail) => {
           return (
             <EmailBody
               key={mail.id}

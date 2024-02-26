@@ -30,12 +30,12 @@ const Login = () => {
           <img
             src={gmail_logo}
             alt="Gmail logo"
-            className="h-[200px] w-[200]"
+            className="h-[200px]"
           />
         </div>
         <div className="mt-4">
           <button
-            className="font-semibold bg-red-500 hover:bg-red-400 text-white w-40 rounded-full p-2 hover-bg-red-300"
+            className="mt-2 p-1 font-semibold bg-blue-600 hover:bg-blue-500 text-white w-[250px] outline-none border-none hover-bg-red-300"
             onClick={clickOnLogin}
           >
             tap to login
