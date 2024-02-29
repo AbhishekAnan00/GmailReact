@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "clone-9d15a",
   storageBucket: "clone-9d15a.appspot.com",
   messagingSenderId: "391588657559",
-  appId: import.meta.env.VITE_BASE_URL,
+  appId: import.meta.env.VITE_DATABASE_ID,
 };
 
 // Initialize Firebase
