@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore"
 import {GoogleAuthProvider, getAuth} from "firebase/auth"
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
+  apiKey: import.meta.env.VITE_REACT_APP_API_KEY,
   authDomain: "clone-9d15a.firebaseapp.com",
   projectId: "clone-9d15a",
   storageBucket: "clone-9d15a.appspot.com",
   messagingSenderId: "391588657559",
-  appId: import.meta.env.VITE_DATABASE_ID,
+  appId: import.meta.env.VITE_REACT_APP_DATABASE_ID,
 };
 
 // Initialize Firebase
