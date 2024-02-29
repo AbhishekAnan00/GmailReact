@@ -1,8 +1,18 @@
-# React + Vite
+#   Work
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Implement search, delete, inbox, compose, and user profile features
 
-Currently, two official plugins are available:
+- Search functionality enables users to efficiently filter emails
+- Delete component allows users to remove unwanted emails
+- Inbox component displays emails with proper styling and layout
+- Clicking on an inbox item shows detailed information 
+- Compose component enables users to create and send new emails
+- User profile popup shows sign-in and sign-out options
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Work in progress:
+- Send component: Incomplete, under development
+- Starred component: Incomplete, under development
+- Snoozed component: Incomplete, under development
+
+
+https://github.com/AbhishekAnan00/GmailReact/assets/156063395/d97455e2-3f04-48cc-8240-e95efe612128
