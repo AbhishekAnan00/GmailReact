@@ -13,6 +13,7 @@ import { auth } from "./firebase";
 import { useEffect, useState } from "react";
 import SentBox from "./pages/SentBox";
 function App() {
+  // console.log(import.meta.env.VITE_API_KEY)
   const [search, setSearch] = useState("");
   const sendMessage = useSelector(sendingMessage);
   const user = useSelector(selectUser);
