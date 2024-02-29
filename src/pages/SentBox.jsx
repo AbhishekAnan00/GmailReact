@@ -19,25 +19,30 @@ const SentBox = (props) => {
       }
     );
   }, []);
+  const messageCount = email.length;
   return (
     <>
-      <div className=" bg-white w-[1100px] rounded-2xl">
-        <EmailCount />
-        {email.map((mail) => {
-          return (
-            <EmailBody
-              key={mail.id}
-              name={mail.data.fromName}
-              email={mail.data.fromEmail}
-              subject={mail.data.search}
-              message={mail.data.text}
-              time={new Date().toLocaleString("en-US", {
-                month: "short",
-                day: "2-digit",
-              })}
-            />
-          );
-        })}
+      <div className=" bg-white w-[1100px] rounded-2xl width-all:w-[1100px] width-all:absolute width-all:ml-[250px] phone-sm:absolute phone-sm:left-0 phone-sm:w-full mt-2 phone-sm:z- -inset-020">
+        <EmailCount count={messageCount} />
+        {email
+          .filter((data) =>
+            data.data.search.toLowerCase().includes(props.search)
+          )
+          .map((mail) => {
+            return (
+              <EmailBody
+                key={mail.id}
+                name={mail.data.fromName}
+                email={mail.data.fromEmail}
+                subject={mail.data.search}
+                message={mail.data.text}
+                time={new Date().toLocaleString("en-US", {
+                  month: "short",
+                  day: "2-digit",
+                })}
+              />
+            );
+          })}
       </div>
     </>
   );

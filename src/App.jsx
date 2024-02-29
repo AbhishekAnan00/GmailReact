@@ -13,7 +13,7 @@ import { auth } from "./firebase";
 import { useEffect, useState } from "react";
 import SentBox from "./pages/SentBox";
 function App() {
-  const [search , setSearch] = useState("")
+  const [search, setSearch] = useState("");
   const sendMessage = useSelector(sendingMessage);
   const user = useSelector(selectUser);
   // console.log(user);
@@ -38,13 +38,13 @@ function App() {
       {user ? (
         <Router>
           <div>
-            <Header search={search} setSearch={setSearch}/>
+            <Header search={search} setSearch={setSearch} />
             <div className="flex">
-              <Sidebar search={search}/>
+              <Sidebar search={search} />
               <Routes>
                 <Route path="/email" element={<EmailDetail />} />
-                <Route path="/" element={<EmailList />} />
-                <Route path="/sent" element={<SentBox search={search}/>} />
+                <Route path="/" element={<EmailList search={search} />} />
+                <Route path="/sent" element={<SentBox search={search} />} />
               </Routes>
             </div>
             <div>{sendMessage && <Compose />}</div>
