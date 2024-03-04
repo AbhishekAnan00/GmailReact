@@ -22,7 +22,7 @@ import { selectUser } from "../redux/UserSlice";
 import { IoMenu } from "react-icons/io5";
 import { MdExpandLess } from "react-icons/md";
 const Sidebar = (props) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [more, setMore] = useState(false);
   const [disableMore, setDisableMore] = useState(false);
   const [showLess, setShowLess] = useState(false);

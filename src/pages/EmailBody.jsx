@@ -80,7 +80,7 @@ const EmailBody = ({ name, subject, message, time, email, id, count }) => {
             <RiDeleteBin6Line onClick={deleteEmail} />
           </div>
         )}
-        <div className="font-medium text-lg phone-sm:hidden phone-md:hidden width-all:block text-right mr-2 width-all:w-[5%]">
+        <div className="font-medium text-lg phone-sm:hidden phone-md:hidden width-all:block text-right mr-2 width-all:w-[10%]">
           {time}
         </div>
       </div>
